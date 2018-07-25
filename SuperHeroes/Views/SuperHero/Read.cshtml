@@ -8,20 +8,23 @@
 <div>
     <h4>SuperHero</h4>
     <hr />
+    <h4>One Above All</h4>
+    <img src="https://i.ytimg.com/vi/dt1MS1YmxyY/maxresdefault.jpg" alt="Alternate Text" />
+    <div></div>
     @foreach (var superHero in Model)
     {
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => superHero.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => superHero.Name)
-        </dd>
-        @Html.ActionLink("Delete", "Delete", new { Id = superHero.Id })
-        @Html.ActionLink("Update", "Update", new { Id = superHero.Id })
-        @Html.ActionLink("Display", "Index", new { Id = superHero.Id })
-        
-    </dl>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => superHero.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => superHero.Name)
+            </dd>
+            @Html.ActionLink("Delete", "Delete", new { Id = superHero.Id })
+            @Html.ActionLink("Update", "Update", new { Id = superHero.Id })
+            @Html.ActionLink("Display", "Index", new { Id = superHero.Id })
+
+        </dl>
     }
 
 </div>
