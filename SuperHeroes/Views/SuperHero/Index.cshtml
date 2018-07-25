@@ -1,14 +1,59 @@
 ﻿@model SuperHeroes.Models.SuperHero
 
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-        <div>
-            @Html.ActionLink("To List", "Read") |
-            @Html.ActionLink("Update | ", "Update")
-            @Html.ActionLink(" Delete", "Delete")
-        </div>
+<div>
+    <h4>Read</h4>
+    <hr />
+   
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AlterEgo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AlterEgo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PrimaryAbility)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PrimaryAbility)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SecondaryAbility)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SecondaryAbility)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CatchPhrase)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CatchPhrase)
+            </dd>
+        </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Read")
+    @Html.ActionLink("Edit", "Read")
+</p>
