@@ -1,0 +1,61 @@
+﻿@model List<SuperHeroes.Models.SuperHero>
+
+@{
+    ViewBag.Title = "Read";
+}
+
+<h2>Read</h2>
+<div>
+    <h4>SuperHero</h4>
+    <hr />
+    @foreach (var superHero in Model)
+    {
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => superHero.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => superHero.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => superHero.AlterEgo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => superHero.AlterEgo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => superHero.PrimaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => superHero.PrimaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => superHero.SecondaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => superHero.SecondaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => superHero.CatchPhrase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => superHero.CatchPhrase)
+        </dd>
+        @Html.ActionLink("Edit", "Edit", new { Id = superHero.Id })
+        @Html.ActionLink("Delete", "Delete", new { Id = superHero.Id })
+    </dl>
+    }
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

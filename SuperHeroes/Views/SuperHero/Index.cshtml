@@ -1,0 +1,14 @@
+﻿@model SuperHeroes.Models.SuperHero
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+        <div>
+            @Html.ActionLink("To List", "Read") |
+            @Html.ActionLink("Update | ", "Update")
+            @Html.ActionLink(" Delete", "Delete")
+        </div>
